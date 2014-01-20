@@ -28,7 +28,10 @@ class Category
      * @var string $name
      *
      * @Assert\NotBlank()
-     * @Assert\MinLength(3)
+     * @Assert\Length(
+     *     min = "3",
+     *     max = "255",
+     * )
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name = '';
