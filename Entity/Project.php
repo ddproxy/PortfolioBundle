@@ -42,7 +42,10 @@ class Project
      * @var string $slug
      *
      * @Assert\NotBlank()
-     * @Assert\MinLength(3)
+     * @Assert\Length(
+     *     min = "3",
+     *     max="128"
+     * )
      * @ORM\Column(name="slug", type="string", length=128, unique=true)
      */
     private $slug;
