@@ -30,7 +30,7 @@ class Category
      * @Assert\NotBlank()
      * @Assert\Length(
      *     min = "3",
-     *     max = "255",
+     *     max = "255"
      * )
      * @ORM\Column(name="name", type="string", length=255)
      */
@@ -40,7 +40,10 @@ class Category
      * @var string $slug
      *
      * @Assert\NotBlank()
-     * @Assert\MinLength(3)
+     * @Assert\Length(
+     *     min = "3",
+     *     max = "128"
+     * )
      * @ORM\Column(name="slug", type="string", length=128, unique=true)
      */
     private $slug;
@@ -49,7 +52,9 @@ class Category
      * @var text $description
      *
      * @Assert\NotBlank()
-     * @Assert\MinLength(10)
+     * @Assert\Length(
+     *     min = "10"
+     * )
      * @ORM\Column(name="description", type="text")
      */
     private $description;
